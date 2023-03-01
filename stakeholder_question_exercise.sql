@@ -52,5 +52,5 @@ on
 group by 
     1
 order by spend_on_brand desc -- comment this line out and remove the comments on the line below to view brand with the most transactions
-//order by transactions_per_brand desc -- comment this line out and remove the comments on the line below to view brand with the most spend
+--order by transactions_per_brand desc -- comment this line out and remove the comments on the line below to view brand with the most spend
 ;
