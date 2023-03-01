@@ -8,6 +8,7 @@ Coding Exercise: https://fetch-hiring.s3.amazonaws.com/data-analyst/ineeddata-da
 "Part 1: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model" is completed in Jordan_Karim_ERD.png
 
 "Part 2: Write a query that directly answers a predetermined question from a business stakeholder" is completed in stakeholder_question_exercise.sql
+--In my query I assumed that we did not want to include data from fetch staff as they can likely be skewed with testing are considered biased.
 
 "Part 3: Evaluate Data Quality Issues in the Data Provided" is completed in data_quality_exercise.sql
 
