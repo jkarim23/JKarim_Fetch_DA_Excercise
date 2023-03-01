@@ -51,6 +51,6 @@ on
     users_receipts.brand_id = brands.brand_id
 group by 
     1
-order by spend_on_brand desc -- comment this line out and remove the comments on the line below to view brand with the most transactions
---order by transactions_per_brand desc -- comment this line out and remove the comments on the line below to view brand with the most spend
+order by spend_on_brand desc -- to view brand with the most transactions, comment this line out and remove the comments at the beginning of the line below
+--order by transactions_per_brand desc -- to view brand with the most spend, comment this line out and remove the comments on the code in the line above 
 ;
