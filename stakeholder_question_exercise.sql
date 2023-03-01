@@ -5,8 +5,9 @@ Utilizing SQL Standard ANSI
 	--Which brand has the most transactions among users who were created within the past 6 months?
 
 Description: Utilizing user data, use this query to analyze the brand with the most spend or change
-			commenting on the ORDER BY conditions lines 54 and 55 to analyze the brand with the most transactions within the past 6 months.
-            The brand on the first row of the results will be the brand with the most for either condition.
+	commenting on the ORDER BY conditions lines 54 and 55 to analyze the brand with the most transactions within the past 6 months.
+        The brand on the first row of the results will be the brand with the most for either condition.
+	In my query I assumed that we did not want to include data from fetch staff as they can likely be skewed with testing are considered biased.
 
 */
 
