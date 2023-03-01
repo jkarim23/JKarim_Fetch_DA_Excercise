@@ -8,6 +8,7 @@ Description: Utilizing user data, use this query to analyze the brand with the m
 	commenting on the ORDER BY conditions lines 54 and 55 to analyze the brand with the most transactions within the past 6 months.
         The brand on the first row of the results will be the brand with the most for either condition.
 	In my query I assumed that we did not want to include data from fetch staff as they can likely be skewed with testing are considered biased.
+	I also did not include inactive users as they are likely inactive due to reasonable causes like fraud, etc.
 
 */
 
