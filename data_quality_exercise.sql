@@ -1,5 +1,4 @@
 /*
-Utilizing SQL Standard ANSI
 In order to solve multiple analyses, the data in each table must be complete, especially when analyzing user data like demographics or user history as well as when 
 we share our analysis with partners, we need to make sure that brand data is comprehensive and accurate. To combat this, we need to make sure that each field is filled out.
 */
@@ -9,6 +8,10 @@ select
 	*
 from
 	users
+inner join 
+	rewards_receipt_item_list as item_list
+on 
+	users.user_id = item_list.user_id
 where 
 	(
     user_id is null 
@@ -27,13 +30,20 @@ they created an account and a handful of consumer-role accounts and many fetch-s
 --This query is used to identify SPD OCR from receipts that are not assigned a brand_id because we do not have information about what the OCR.
 select 
     item_list.original_item_text,
-	count(item_list.original_item_text)
+	count(item_list.original_item_text),
+    brands.name
 from
     rewards_receipt_item_list as item_list
+left join
+	brands
+on 
+	item_list.brand_id = brands.brand_id
 where
 	brand_id is null
-group by 1
-order by item_list.original_item_text desc
+group by 
+	1
+order by 
+	item_list.original_item_text desc
 /* 
 I have found instances where we do not have brand information on SPD OCR for which will skew our data for brands with the most spend 
 and most transactions. With the query we can view the most freqntly seen SPD OCR we have not assigned a brand_id.
